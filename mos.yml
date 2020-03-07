@@ -1,0 +1,36 @@
+author: Delta-things
+type: lib
+description: Mongoos library for Lora1276, for Arduino Librar by NiceRF
+version: 1.0
+
+sources:
+  - src
+includes:
+  - include
+
+filesystem:
+  - fs
+
+config_schema:
+  - ["spi.enable", true]
+  - ["spi.miso_gpio", 12]
+  - ["spi.mosi_gpio", 13]
+  - ["spi.sclk_gpio", 14]
+  - ["spi.cs0_gpio", 15]
+  - ["spi.unit_no", 2]
+  - ["lora","o",{title:":LoRa config"}]
+  - ["lora.dio0","i",{title:"LoRa pin"}]
+  - ["lora.dio0",32]
+
+libs:
+  - origin: https://github.com/saikiran235/arduino-compat
+#  - origin: https://github.com/mongoose-os-libs/arduino-compat
+  - origin: https://github.com/mongoose-os-libs/arduino-spi
+
+
+tags:
+  - c
+  - arduino
+  - core
+
+manifest_version: 2017-09-29
