@@ -18,6 +18,7 @@ void mgos_lora_end(LoRaClass* lora);
 int mgos_lora_rssi(LoRaClass* lora);
 void mgos_lora_receive_callback(LoRaClass* lora,void(*callback)(int));
 void mgos_lora_receive_mode(LoRaClass* lora);
+void mgos_lora_set_sync_word(LoRaClass* lora, int sw);
 /*int mgos_LoRa_beginpacket(LoRaClass* lora, int implicitHeader);
 int mgos_LoRa_endpacket(LoRaClass* lora);
 size_t mgos_LoRa_write(LoRaClass* lora, const uint8_t *buffer, size_t size);

@@ -67,6 +67,12 @@ void mgos_lora_receive_mode(LoRaClass* lora)
         return;
     lora->receive();
 }
+void mgos_lora_set_sync_word(LoRaClass* lora, int sw)
+{
+    if (lora == nullptr)
+        return;
+    lora->setSyncWord(sw);
+}
 /*int mgos_LoRa_beginpacket(LoRaClass* lora, int implicitHeader)
 {
 	if (lora == nullptr)
